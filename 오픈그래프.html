@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    	body { 
+background: #53A74C;}
+ul, li { margin: 0; list-style: none;}
+ul.car { position: absolute; bottom: 40px; right: 450px;
+           animation: slide 12s infinite;}
+
+ ul.car li:nth-child(1) { animation: car1 1s infinite;} 
+ ul.car li:nth-child(2) {  z-index: 1;
+                           bottom: -6px;
+                           right: 200px;
+                           position: absolute; 
+                           animation: bike 3s linear infinite;}
+  ul.car li:nth-child(3) { z-index: 1;
+                           bottom: -6px;
+                           right: 95px;
+                           position: absolute; 
+                           animation: bike 3s  linear infinite;}
+@keyframes slide { 
+        0% { transform: translateX(750px);}
+        100% { transform: translateX(-1600px);}
+       
+      }  
+
+@keyframes car1 { 
+        0% { transform: translateY(0%);}
+        50% { transform: translateY(2%);}
+        100% { transform: translateY(0%);}
+      }                           
+
+@keyframes bike {  
+        100% {transform: rotate(-360deg);}
+      }
+    </style>
+</head>
+<body>
+    <ul class="car">
+        <li><img src="img/car1.png" alt="1"></li>
+        <li><img src="img/car2.png" alt="2"></li>
+        <li><img src="img/car2.png" alt="2"></li>
+      </ul>
+</body>
+</html>
